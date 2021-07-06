@@ -1,0 +1,53 @@
+// não é mais LR(1)
+
+int i, j, k;
+int mult;
+
+
+int soma( int a, int b) {
+   int restultado;
+   if ( b == 0) resultado = a;
+   else resutado = soma(a+1, b-1);
+
+   return resultado;
+}
+
+typedef struct  {
+    int matricula;
+    double g1, faltas, g2;
+} Aluno;
+
+Aluno a1, a2;
+
+
+void main() {
+
+a1.matricula = 23;
+
+   i = 5;
+   
+   i = vint[3];
+
+   i = vint[i];
+
+   k = soma(i, vint[ mat[7][3] + 4]);
+    
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+Integrantes: Arthur D'Arisbo, Bruno Conrado e Luiz Henrique Mosmann
+E-mail's: arthur.darisbo@edu.pucrs.br; bruno.conrado@edu.pucrs.br; luiz.mosmann@edu.pucrs.br
+Matrículas: 14103931-3; 18106109-4; 17104157-7
+
+Para rodar:
+> make clean
+> make
+> java Parser <arquivo.txt>
+
+Parte 1 - Verificação de Tipos
+Exercício 1: Pode-se testar essa parte com arquivo: "parte1_ex1.txt"
+Exercício 2: Pode-se testar essa parte com arquivo: "parte1_ex2.txt"
+Exercício 3: Pode-se testar essa parte com arquivo: "parte1_ex3.txt"
+
+Infelizmente, não conseguimos concluir os dois últimos tópicos da parte 1. O penúltimo deles, ficamos com a sensação de quase termos obtido êxito, porém mesmo com as diversas tentativas e pesquisas, não conseguimos.
+
+Parte 2 – Geração de código 
+O comando de atribuição foi transformado em uma expressão, conforme os exemplos vistos em aula. Inicialmente tínhamos apenas um comando, que não reconhecia atribuições sucessivas. A declaração feita na área de expressões é bastante similar a que está entre os comandos, mas com a ausência do ponto e vírgula, pois podem haver múltiplas atribuições. Também foi necessário alterar as ações de manuseio da pilha, pois é importante colocar o valor de volta na pilha após retirá-lo e o colocar na varável de manuseio.
+O mesmo ocorreu no operador de incremento. É necessário criar condições de pré e pós incremento. Caso exista um elemento antes do operador, é utilizada a condição de pré. Caso contrário, é utilizada a condição de pós. O comando pré pega a variável, empilha o valor um, soma ambos os valores, armazena e então volta a buscar. O comando pós funciona de maneira bastante similar.
+Para os comandos break e continue, a melhor solução é a utilização de duas pilhas. Além da pilha que normalmente usamos, para comando de seleção, é criada uma nova que armazena somente comandos de repetição. Quando é acionado um comando break, é necessário buscar o laço que está no topo da pilha e removê-lo. Após isso, o break se torna um jump incondicional para o resto das instruções.
+O segundo e terceiro método não foram totalmente implementados devido a dificuldades com a codificação. Entretanto, entendemos a lógica por trás dessa implementação. O comando for não pôde ser implementado por dificuldades similares.
+Na parte 2, infelizmente não conseguimos finalizar a implementação e para evitar erros, comentamos o código adicionado.
+
+Por fim, gostaríamos de ressaltar o quanto esse trabalho nos ajudou a compreendermos melhor os conceitos vistos durante a disciplina de uma forma prática.

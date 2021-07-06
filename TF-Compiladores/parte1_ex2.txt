@@ -1,0 +1,29 @@
+int i, j, k;
+int resultado;
+int resultado;
+double x;
+double y;
+
+
+
+bool b;
+bool ok;
+
+@functions:
+int soma (int a) {
+   return resultado;
+}
+
+
+void main() {
+   j = k;
+   x = k * 3;  
+
+   x = i + 4;
+   y = y + i + 2;  
+ 
+   ok = b && (x > i) && (i > 3);
+
+   if (ok)
+      i = 7;
+}

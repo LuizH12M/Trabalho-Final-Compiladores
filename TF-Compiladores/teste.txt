@@ -1,0 +1,13 @@
+int x;
+int a;
+int y;
+
+int teste(int, int);
+
+@functions:
+
+void main() {
+  y = a + x;
+
+
+}

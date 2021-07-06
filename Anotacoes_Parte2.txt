@@ -1,0 +1,36 @@
+EXEMPLOSEM.Y
+
+%right '='
+%token BREAK, CONTINUE
+
+exp:	| ID '=' exp {System.out.println("\tPOPL %EDX");
+					System.out.println("\tMOVL %EDX");
+					System.out.println("\tPUSHL %EDX, _"+$1);
+					}
+
+		| INCR ID {System.out.println("\tPUSHL _"+$2);}
+		| ID INCR {System.out.println("\tPUSHL _"+$1);}
+		| BREAK {System.out.println("\tPOPL %EDX")';'} 
+		| CONTINUE ';'} # FALTA INSERIR O COMANDO 
+
+private Stack<Integer> pRotSel = new Stack<Integer>(); # Pilha de seleção
+private Stack<Integer> pRotRep = new Stack<Integer>(); # Pilha de repetição, no topo estará o while/for mais interno
+
+# Break e Continue: Jump incondicional para o rótulo x ou x+1
+
+EXEMPLOSEM.FLEX
+
+{NUM} {yyparser.yylval = new ParserVal(yytext());
+		return parser.NUM;}
+
+"=="	{return Parser.EQ;}
+"<="	{return Parser.LEQ;}
+">="	{return Parser.GED;}
+"!="	{return Parser.NEQ;}
+
+"&&"	{return Parser.AND;}
+"||"	{return Parser.OR;}
+"++"	{return Parser.INCR;}
+
+break {return Parser.BREAK;}
+continue {return Parser.CONTINUE;}
